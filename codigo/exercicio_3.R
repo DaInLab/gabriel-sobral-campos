@@ -1,4 +1,4 @@
-# Importando o arquivo do exercÃ­cio 3
+# Importando o arquivo do exercício 3
 if(!("xlsx") %in% installed.packages()) install.packages("xlsx", type = "source") 
 library(xlsx)
 eb = read.xlsx("./dados/exercicio3.xlsx",encoding =  "UTF-8", sheetName = "Sheet1")

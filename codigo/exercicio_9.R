@@ -2,7 +2,6 @@
 if (!("readxl") %in% installed.packages()) install.packages("readxl")
 library(readxl)
 
-
 salarios = read_excel("./dados/exercicio9.xls", col_types = c("numeric"))
 salarios <- as.matrix(salarios)
 

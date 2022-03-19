@@ -3,17 +3,17 @@ if (!("readxl") %in% installed.packages()) install.packages("readxl")
 library(readxl)
 exercicio4 <- read_excel("./dados/exercicio4.xls")
 
-range(sort(exercicio4))
-at <- ceiling((max(exercicio4)- min(exercicio4)))
+range(sort(exercicio4$Salários))
+at <- ceiling((max(exercicio4$Salários)- min(exercicio4$Salários)))
 at
-k <- nclass.Sturges(exercicio4)
-length(exercicio4)
-k <- ceiling((sqrt(length(exercicio4))))
+k <- nclass.Sturges(exercicio4$Salários)
+length(exercicio4$Salários)
+k <- ceiling((sqrt(length(exercicio4$Salários))))
 k
-h <- ceiling(AT/k)
+h <- ceiling(at/k)
 h
 
-classe_inf <- min(exercicio4)
+classe_inf <- min(exercicio4$Salários)
 classe_sup <- classe_inf+(k*h)
 
 brk <-seq(classe_inf,classe_sup,h)

@@ -2,7 +2,6 @@
 if (!("readxl") %in% installed.packages()) install.packages("readxl")
 library(readxl)
 
-
 alturas = read_excel("./dados/exercicio8.xls", col_types = c("numeric"))
 alturas <- as.matrix(alturas)
 
